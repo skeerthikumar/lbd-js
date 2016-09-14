@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="" ng-init="myCol='lightblue';quantity=1;cost=5;firstName='Keerthi';lastName='Kumar';person={firstName:'Keerthi',lastName:'Kumar'};points=[1,15,19,2,40]">
+  <p>My first expression evaluated from ng-app: {{ 5 + 5 }}</p>
+  <!-- Value is bound - Angular will return the color you type-->
+  <input style="background-color:{{myCol}}" ng-model="myCol" value="{{myCol}}">
+
+  <!--AngularJS numbers are like JavaScript numbers:-->
+  <p>Total in dollar -With JS Values: {{ quantity * cost }}</p>
+
+  <!--AngularJS numbers are like JavaScript numbers: Same Example using Data Binding-->
+  <p>Total in dollar -With Data Binding: <span ng-bind="quantity * cost"></span></p>
+
+  <!--AngularJS strings are like JavaScript strings:-->
+  <p>The name is <strong>{{ firstName + " " + lastName }}</strong> from init data</p>
+
+  <!--AngularJS strings are like JavaScript strings:Data Binding-->
+  <p>The name is <strong><span ng-bind="firstName + ' ' + lastName"></span></strong> from data Binding</p>
+
+  <!-- AngularJS objects are like JavaScript objects: -->
+  <p>The last name is <strong>{{ person.lastName }}</strong> from a JSON Object</p>
+
+  <!-- AngularJS objects are like JavaScript objects: Data Binding way-->
+  <p>The last name is <strong><span ng-bind="person.lastName"></span></strong> from a JSON object</p>
+
+  <!-- AngularJS arrays are like JavaScript arrays: -->
+  <p>The third result is {{ points[2] }}</p>
+  <p>The third result is <span ng-bind="points[2]"></span></p>
+
+  <!-- Like JavaScript expressions, AngularJS expressions can contain literals, operators, and variables.
+
+  Unlike JavaScript expressions, AngularJS expressions can be written inside HTML.
+
+  AngularJS expressions do not support conditionals, loops, and exceptions, while JavaScript expressions do.
+
+  AngularJS expressions support filters, while JavaScript expressions do not. -->
+  
+</div>
+
+<!-- Removal of ng-app do not evaluate the expression-->
+<div>
+  <p>My first expression - without use of ng-app: {{ 5 + 5 }}</p>
+</div>
+
+<div>
+
+</div>
+
+</body>
+</html>

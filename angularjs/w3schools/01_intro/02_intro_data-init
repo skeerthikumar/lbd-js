@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+  <!--One can use data-ng-init to make the page valid-->
+<div ng-app="" ng-init="firstName='Keerthi'">
+  <p The default name is <span ng-bind="firstName"></span></p>
+
+</div>
+
+
+</body>
+</html>
